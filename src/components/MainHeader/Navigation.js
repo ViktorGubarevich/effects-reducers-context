@@ -1,21 +1,21 @@
 import styles from "./Navigation.module.css";
 
-const Navigation = (props) => (
+const Navigation = ({ isLoggedIn, onLogout }) => (
   <nav className={styles.nav}>
     <ul>
-      {props.isLoggedIn && (
+      {isLoggedIn && (
         <li>
           <a href="/">Пользователи</a>
         </li>
       )}
-      {props.isLoggedIn && (
+      {isLoggedIn && (
         <li>
           <a href="/">Админ</a>
         </li>
       )}
-      {props.isLoggedIn && (
+      {isLoggedIn && (
         <li>
-          <button onClick={props.onLogout}>Выйти</button>
+          <button onClick={onLogout}>Выйти</button>
         </li>
       )}
     </ul>
