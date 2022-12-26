@@ -15,7 +15,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker-build": "docker build --tag gubarew/react .",
+    "docker-run": "docker run -d -p 3000:3000 -v react:/effects-reducers-context/data --rm --name reactapp gubarew/react",
+    "docker-run-dev": "docker run -d -p 3000:3000 -v C:/Itransition/Projects/Udemy/Современный React с нуля (2022)/Effects_Reducers_Context/effects-reducers-context:/app -v /app/node_modules -v react:/app/data --rm --name reactapp gubarew/react",
+    "docker-start": "docker start reactapp",
+    "docker-stop": "docker stop reactapp"
   },
   "eslintConfig": {
     "extends": [
